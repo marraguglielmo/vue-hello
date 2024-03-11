@@ -19,3 +19,8 @@ Aggiungere alla pagina un’immagine, presa anch’essa da un data.
 1. prendo il metodo `createApp` dall oggetto `Vue`
 2. innesto Vue dentro `#app`
 3. dentro il metodo `data` inserisco l'oggetto che contiene la variabile _messaggio_
+
+## Svolgimento bonus
+
+1. inserisco la proprietà `img` nel `data`, assegnandoli il persorso dell'immagine
+2. con la direttiva **bind** all attributo `src` dell'immagine in html inserisco la variabile _img_
