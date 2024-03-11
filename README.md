@@ -12,6 +12,7 @@ Aggiungere alla pagina un’immagine, presa anch’essa da un data.
 
 1. importo il link Vue
 2. creo il div globale con id 'app'
+3. nell' h1 vado a inserire la variabile _messaggio_ per stampare in pagina
 
 #### js :
 
