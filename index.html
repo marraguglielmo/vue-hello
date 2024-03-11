@@ -18,7 +18,7 @@
     <div id="app">
         <!-- output -->
         <h1 class="border rounded-2 border-3 w-50">{{messaggio}}</h1>
-        <h2 class="border rounded-2 border-3 w-50 " :class=" {'verde' : isEven}">
+        <h2 class="border rounded-2 border-3 w-50 " :class=" {'verde' : isEven}, { 'rosso' : isFive}">
             orologio--> {{clock}}
         </h2>
         <div> <img :src="img" alt="foto avatar" class="border border-2 rounded-3"></div>

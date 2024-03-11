@@ -7,6 +7,7 @@ createApp({
             img: 'img/avatar_7.jpg',
             clock: '',
             isEven: false,
+            isFive: false,
             nome: 'Guglielmo',
             nomeTemp: ''
         }
@@ -21,10 +22,15 @@ createApp({
             this.clock = `${h}:${m}:${s}`;
 
             
-            if(s % 2 === 0){
+            if(s % 5 === 0){
+                this.isFive = true;
+                this.isEven = false;
+            }else if(s % 2 === 0){
+                this.isFive = false;
                 this.isEven = true;
             }else{
                 this.isEven = false;
+                this.isFive = false;
             }
         },
         startClock(){
