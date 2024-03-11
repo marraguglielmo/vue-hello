@@ -5,7 +5,8 @@ createApp({
         return{
             messaggio: 'primo messaggio con Vue',
             img: 'img/avatar_7.jpg',
-            clock: '00:00:00'
+            clock: '',
+            isEven: false
         }
     },
 
@@ -17,14 +18,19 @@ createApp({
             const s = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
             this.clock = `${h}:${m}:${s}`;
             
+            if(s % 2 === 0){
+                this.isEven = true;
+            }else{
+                this.isEven = false;
+            }
         },
         startClock(){
             setInterval(this.setClock, 1000);
-        }
+        },
+        
     },
 
     mounted(){
-        console.log('--------app montata---------');
         this.setClock();
         this.startClock();
     }

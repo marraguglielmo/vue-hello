@@ -17,9 +17,11 @@
 
     <div id="app">
         <!-- output -->
-        <h1>{{messaggio}}</h1>
-        <h2 class="text-end">{{clock}}</h2>
-        <div> <img :src="img" alt="foto avatar"></div>
+        <h1 class="border rounded-2 border-5 w-50">{{messaggio}}</h1>
+        <h2 class="border rounded-2 border-5 w-50 " :class=" {'verde' : isEven}">
+            orologio--> {{clock}}
+        </h2>
+        <div class="border rounded-2 border-5 w-50"> <img :src="img" alt="foto avatar"></div>
         <!-- btn -->
         <button class="btn btn-primary">Stampa</button>
     </div>
