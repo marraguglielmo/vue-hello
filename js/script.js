@@ -6,7 +6,9 @@ createApp({
             messaggio: 'primo messaggio con Vue',
             img: 'img/avatar_7.jpg',
             clock: '',
-            isEven: false
+            isEven: false,
+            nome: 'Guglielmo',
+            nomeTemp: ''
         }
     },
 
@@ -17,6 +19,7 @@ createApp({
             const m = d.getMinutes() < 10 ? '0' + d.getMinutes() : d.getMinutes();
             const s = d.getSeconds() < 10 ? '0' + d.getSeconds() : d.getSeconds();
             this.clock = `${h}:${m}:${s}`;
+
             
             if(s % 2 === 0){
                 this.isEven = true;
@@ -27,7 +30,9 @@ createApp({
         startClock(){
             setInterval(this.setClock, 1000);
         },
-        
+        nuovoNome(){
+            this.nomeTemp === '' || !isNaN(this.nomeTemp) ? alert('Per favore inserisci un nome') : this.nome = this.nomeTemp;
+        }
     },
 
     mounted(){
